@@ -4,9 +4,11 @@ from io import BytesIO
 from datetime import datetime
 import os
 
-agentId = "CYKESWD1CO" #INPUT YOUR AGENT ID HERE
-agentAliasId = "2VQNHMXR4L" # Hits draft alias, set to a specific alias id for a deployed version
+#agentId = "CYKESWD1CO" #INPUT YOUR AGENT ID HERE
+#agentAliasId = "2VQNHMXR4L" # Hits draft alias, set to a specific alias id for a deployed version
 theRegion = "us-west-2"
+agentId =  os.environ['AgentId']
+agentAliasId = os.environ['AgentAliasId']
 
 os.environ["AWS_REGION"] = theRegion
 region = os.environ.get("AWS_REGION")
